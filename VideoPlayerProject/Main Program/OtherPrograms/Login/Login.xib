@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Login" customModule="VideoPlayerProject" customModuleProvider="target">
+            <connections>
+                <outlet property="loginBtn" destination="9O5-PJ-gZI" id="0HE-V6-jlk"/>
+                <outlet property="passwordTxt" destination="N3W-PD-xsE" id="dfK-b7-kpr"/>
+                <outlet property="usernameTxt" destination="qmU-Dq-SwK" id="VxW-N9-axg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzL-Up-BeA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KYW-vG-99X">
+                            <rect key="frame" x="82" y="350" width="250" height="118"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmU-Dq-SwK">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3W-PD-xsE">
+                                    <rect key="frame" x="0.0" y="44" width="250" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O5-PJ-gZI">
+                                    <rect key="frame" x="0.0" y="88" width="250" height="30"/>
+                                    <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                    <connections>
+                                        <action selector="login:" destination="-1" eventType="touchUpInside" id="Ycd-8l-bz1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="BXJ-dG-jYY"/>
+                                <constraint firstItem="N3W-PD-xsE" firstAttribute="leading" secondItem="KYW-vG-99X" secondAttribute="leading" id="CAj-Xp-FGb"/>
+                                <constraint firstAttribute="trailing" secondItem="N3W-PD-xsE" secondAttribute="trailing" id="PBc-Zz-MNv"/>
+                                <constraint firstItem="qmU-Dq-SwK" firstAttribute="leading" secondItem="KYW-vG-99X" secondAttribute="leading" id="jqp-Yz-Rb8"/>
+                                <constraint firstAttribute="trailing" secondItem="qmU-Dq-SwK" secondAttribute="trailing" id="u3e-Wo-nan"/>
+                                <constraint firstAttribute="trailing" secondItem="9O5-PJ-gZI" secondAttribute="trailing" id="yl9-xe-LKj"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="KYW-vG-99X" firstAttribute="centerX" secondItem="EzL-Up-BeA" secondAttribute="centerX" id="LWN-sA-y9D"/>
+                        <constraint firstItem="KYW-vG-99X" firstAttribute="top" secondItem="EzL-Up-BeA" secondAttribute="top" constant="350" id="r9A-r8-ZEC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EzL-Up-BeA" secondAttribute="trailing" id="NLf-Mb-qnd"/>
+                <constraint firstAttribute="bottom" secondItem="EzL-Up-BeA" secondAttribute="bottom" id="elX-46-Bzh"/>
+                <constraint firstItem="EzL-Up-BeA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tAK-MB-gV2"/>
+                <constraint firstItem="EzL-Up-BeA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tXb-Yb-iwg"/>
+            </constraints>
+            <point key="canvasLocation" x="-59" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

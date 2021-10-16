@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPlayer" customModule="VideoPlayerProject" customModuleProvider="target">
+            <connections>
+                <outlet property="currentDuration" destination="IrS-rb-APq" id="2l8-1T-6CQ"/>
+                <outlet property="forward" destination="IPK-bI-etI" id="Uy0-HE-SQm"/>
+                <outlet property="pause" destination="pUU-hf-KgP" id="9gE-vP-uQZ"/>
+                <outlet property="progress" destination="RnY-GQ-AbI" id="VJS-aR-tep"/>
+                <outlet property="rewind" destination="o67-t7-wTJ" id="Zda-Ov-3PS"/>
+                <outlet property="videoDuraction" destination="HPK-KA-pW5" id="gHP-h9-UZ6"/>
+                <outlet property="vwPlayer" destination="iN0-l3-epB" id="NsR-fK-7jD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jUn-7v-9nM">
+                    <rect key="frame" x="-30" y="791" width="474" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IrS-rb-APq">
+                            <rect key="frame" x="0.0" y="15" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-GQ-AbI">
+                            <rect key="frame" x="135" y="0.0" width="204" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="n54-B1-q4E"/>
+                            </constraints>
+                            <connections>
+                                <action selector="sliderAttributes:" destination="-1" eventType="valueChanged" id="HvW-jJ-Kie"/>
+                            </connections>
+                        </slider>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HPK-KA-pW5">
+                            <rect key="frame" x="474" y="15" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3fL-bZ-tMI"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xuW-uZ-wyI">
+                    <rect key="frame" x="154" y="831" width="106" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o67-t7-wTJ">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" button="YES" image="YES"/>
+                            </accessibility>
+                            <connections>
+                                <action selector="rewindVideo:" destination="-1" eventType="touchUpInside" id="hP8-qT-ygR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-hf-KgP">
+                            <rect key="frame" x="38" y="0.0" width="30" height="30"/>
+                            <connections>
+                                <action selector="pauseVideo:" destination="-1" eventType="touchUpInside" id="3nJ-SZ-Dh6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPK-bI-etI">
+                            <rect key="frame" x="76" y="0.0" width="30" height="30"/>
+                            <connections>
+                                <action selector="forwardVideo:" destination="-1" eventType="touchUpInside" id="1Ob-dM-ASS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IPK-bI-etI" firstAttribute="width" secondItem="o67-t7-wTJ" secondAttribute="width" id="321-CL-P0m"/>
+                        <constraint firstAttribute="height" constant="30" id="h8U-Uv-NdK"/>
+                        <constraint firstItem="pUU-hf-KgP" firstAttribute="width" secondItem="o67-t7-wTJ" secondAttribute="width" id="oCY-PD-cs9"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xuW-uZ-wyI" secondAttribute="bottom" constant="35" id="2X1-rz-vBA"/>
+                <constraint firstItem="xuW-uZ-wyI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Rs-HL-E27"/>
+                <constraint firstItem="xuW-uZ-wyI" firstAttribute="top" secondItem="jUn-7v-9nM" secondAttribute="bottom" constant="10" id="4hD-Ws-JVX"/>
+                <constraint firstItem="jUn-7v-9nM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dxc-cs-ogH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </view>
+    </objects>
+</document>
