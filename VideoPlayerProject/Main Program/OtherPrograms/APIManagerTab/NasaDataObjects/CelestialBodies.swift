@@ -6,9 +6,9 @@
 //
 
 import Foundation
-//import RealmSwift
-//
-//class CelestialBodies: Object {
-//    private enum CodingKeys: String, CodingKey { case date1 = "2015-09-08"}
-//    @objc dynamic var date1: Asteroid?
-//}
+import RealmSwift
+
+class CelestialBodies: Object {
+    private enum CodingKeys: String, CodingKey { case date1 = "2015-09-08"}
+    @objc dynamic var date1: Asteroid?
+}

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387EE573271C331400F01294 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 387EE572271C331400F01294 /* Realm */; };
+		387EE575271C331400F01294 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 387EE574271C331400F01294 /* RealmSwift */; };
 		A101A77C268B2161007E507E /* CircularRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101A77B268B2161007E507E /* CircularRotationViewController.swift */; };
 		A106E143266A310500AA726D /* GetImageInBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106E142266A310500AA726D /* GetImageInBackground.swift */; };
 		A106E145266A31A500AA726D /* GetImageInBackground.xib in Resources */ = {isa = PBXBuildFile; fileRef = A106E144266A31A500AA726D /* GetImageInBackground.xib */; };
@@ -177,6 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387EE575271C331400F01294 /* RealmSwift in Frameworks */,
+				387EE573271C331400F01294 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,8 @@
 			);
 			name = VideoPlayerProject;
 			packageProductDependencies = (
+				387EE572271C331400F01294 /* Realm */,
+				387EE574271C331400F01294 /* RealmSwift */,
 			);
 			productName = VideoPlayerProject;
 			productReference = A1C2236D2667A032002F0B8B /* VideoPlayerProject.app */;
@@ -524,6 +530,7 @@
 			);
 			mainGroup = A1C223642667A032002F0B8B;
 			packageReferences = (
+				387EE571271C331400F01294 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = A1C2236E2667A032002F0B8B /* Products */;
 			projectDirPath = "";
@@ -831,6 +838,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		387EE571271C331400F01294 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		387EE572271C331400F01294 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387EE571271C331400F01294 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		387EE574271C331400F01294 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387EE571271C331400F01294 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A1C223792667A032002F0B8B /* VideoPlayerProject.xcdatamodeld */ = {
